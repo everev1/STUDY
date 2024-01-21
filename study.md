@@ -15,7 +15,8 @@ for i, letter in enumerate(['A', 'B', 'C'], start=101):
 103 C
 
 ```
-
-- map
+- pip install requests
+- from 상위 폴더 import 하위폴더
+- map(,)
 
 - 
