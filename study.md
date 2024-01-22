@@ -77,3 +77,12 @@ def reverse_string(stri):
 result = reverse_string(list("Hello, World!"))
 print(result)  # !dlroW ,olleH
 ```
+
+반복문에서도 한줄로 출력하기
+```
+예시코드
+arr = [1, 2, 3, 4, 5]
+for num in arr:
+    print(num, end='')
+출력결과 : 12345
+```
