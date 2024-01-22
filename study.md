@@ -86,3 +86,27 @@ for num in arr:
     print(num, end='')
 출력결과 : 12345
 ```
+
+- list.sort() vs sorted(list)
+    - sort는 리스트에만 사용가능, 원본 리스트 자체를 오름차순으로 정렬
+    - sorted는 다른 시퀀스에도 적용가능, 리스트를 오름차순으로 정렬한 복제본을 만든다
+```
+# tuple 정렬하기 sol1) 
+def sort_tuple(origin_tuple):
+    sorting = sorted(origin_tuple) # 오름차순하고 리스트로 반환
+    new_tuple = tuple(sorting)  # 다시 튜플 씌우기
+    return new_tuple
+
+result = sort_tuple((5, 2, 8, 1, 3))
+print(result)
+
+# sol2)
+def sort_tuple(origin_tuple):
+    new_list = []
+    new_list.extend(origin_tuple)  # extend로 인해 튜플이 벗겨진 채로 리스트에 추가
+    new_tuple = tuple(sorted(new_list))
+    return new_tuple
+
+result = sort_tuple((5, 2, 8, 1, 3))
+print(result)
+```
