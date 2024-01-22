@@ -57,3 +57,23 @@ for i in range(1,11):
 
 print(dummy_data)
 ```
+
+reversed 로 문자열 거꾸로 출력하기
+```
+# # def reverse_string(stri):
+#     sum = ''
+#     for char in reversed(stri):
+#         sum += char
+#     return sum
+
+
+# result = reverse_string("Hello, World!")
+# print(result)  # !dlroW ,olleH
+
+def reverse_string(stri):
+    talk = ''.join(reversed(stri))
+    return talk
+
+result = reverse_string(list("Hello, World!"))
+print(result)  # !dlroW ,olleH
+```
