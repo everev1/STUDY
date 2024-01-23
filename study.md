@@ -110,3 +110,27 @@ def sort_tuple(origin_tuple):
 result = sort_tuple((5, 2, 8, 1, 3))
 print(result)
 ```
+대문자 소문자 바꾸기
+```
+def capitalize_words(stri):
+    word = stri.title() # 문자열 내 띄어쓰기 기준으로 각 단어의 첫글자는 대문자로, 나머지는 소문자로 변환한다.
+    word = stri.capitalize() # 첫 글자만 대문자
+    return word
+
+result = capitalize_words("hello, world!")
+print(result)
+
+# title 안쓰고 풀기
+'''
+def capitalize_words(stri):
+    text = stri
+    text = text.replace(text[0],text[0].upper())
+    for i in range(1,len(stri)):
+        if stri[i-1] == ' ':
+            text = text.replace(text[i],text[i].upper())
+    return text
+
+result = capitalize_words("hello, world!")
+print(result)
+'''
+```
