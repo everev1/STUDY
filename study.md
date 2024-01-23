@@ -134,3 +134,10 @@ result = capitalize_words("hello, world!")
 print(result)
 '''
 ```
+
+dict value 값 얻기
+```
+dict.get(key)  # key 값 없으면 None 반 // dict.get(key, 'Unknown') -> Key 없을때 Unknown 반환
+# or
+dict[key]
+```
