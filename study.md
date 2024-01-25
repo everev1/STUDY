@@ -141,3 +141,35 @@ dict.get(key)  # key 값 없으면 None 반 // dict.get(key, 'Unknown') -> Key �
 # or
 dict[key]
 ```
+
+객체 클래스 예외처리 문제
+```
+class UserInfo:
+    def __init__(self):
+        self.user_data = {}
+    
+    def get_user_info(self):
+        try:
+            name = input("이름을 입력하세요: ")
+            age = int(input("나이를 입력하세요: "))
+            self.user_data['이름'] = name
+            self.user_data['나이'] = age
+        except ValueError:
+            print('나이는 숫자로 입력해야 합니다.')
+
+    def display_user_info(self):
+        if not self.user_data:
+            print('사용자 정보가 입력되지 않았습니다.')
+        else:
+            # print('사용자 정보:')
+            # print('이름:', self.user_data['이름'])
+            # print('나이:', self.user_data['나이'])
+            print(f'사용자 정보:\n이름: {self.user_data['이름']}\n나이: {self.user_data['나이']}')
+            # print('사용자 정보:')
+            # for k, v in self.user_data.items():
+            #     print(f'{k} : {v}')
+
+user = UserInfo()
+user.get_user_info()
+user.display_user_info()
+```
