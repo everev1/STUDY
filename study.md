@@ -173,3 +173,21 @@ user = UserInfo()
 user.get_user_info()
 user.display_user_info()
 ```
+
+SWEA View 문제 코드
+```
+for tc in range(10):
+    N = int(input())
+    height = list(map(int, input().split()))
+
+    result = 0
+
+    for index in range(2, N - 2):
+        near_height_list = [height[index - 2], height[index - 1], height[index + 1], height[index + 2]]
+        temp = max(near_height_list)
+
+        if height[index] > temp:
+            result += height[index] - temp
+
+    print(f'#{tc + 1} {result}')
+```
